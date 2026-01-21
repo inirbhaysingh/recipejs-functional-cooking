@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RecipeJS - Your Functional Cooking Companion</title>
+    <title>RecipeJS - Functional Cooking Companion</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -13,14 +13,22 @@
     </header>
 
     <main>
+      <!-- Search -->
+      <input
+        type="text"
+        id="search-input"
+        placeholder="Search recipes by title or ingredients..."
+      />
+
       <!-- Controls -->
       <section class="controls">
         <div class="filters">
-          <button data-filter="all">All Recipes</button>
+          <button data-filter="all">All</button>
           <button data-filter="easy">Easy</button>
           <button data-filter="medium">Medium</button>
           <button data-filter="hard">Hard</button>
           <button data-filter="quick">Quick (&lt; 30 min)</button>
+          <button data-filter="favorites">Favorites</button>
         </div>
 
         <div class="sort">
@@ -29,10 +37,11 @@
         </div>
       </section>
 
-      <!-- Recipe Cards -->
-      <div id="recipe-container">
-        <!-- Rendered by JavaScript -->
-      </div>
+      <!-- Counter -->
+      <p id="recipe-counter"></p>
+
+      <!-- Recipes -->
+      <div id="recipe-container"></div>
     </main>
 
     <script src="app.js"></script>
